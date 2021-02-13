@@ -9,21 +9,17 @@ WORKDIR /code
 # copy the dependencies file to the working directory
 COPY requirements.txt .
 
-ENV MQTT_ADDR="192.168.254.1"
+ENV MQTT_ADDR="192.168.254.36"
 ENV MQTT_PORT="1883"
 ENV MQTT_TOPIC="sensor/rectec"
-ENV GRILL_ID="X"
-ENV GRILL_IP="192.168.254.123"
-ENV PRODUCTKEY="X"
 ENV UPDATE_SECS="30"
-
 
 # install dependencies
 #RUN apk update && apk add libressl-dev postgresql-dev libffi-dev gcc musl-dev python3-dev 
+RUN apk update && apk add gcc musl-dev
 RUN pip install -r requirements.txt
-RUN pip install pytuya
 # copy the content of the local src directory to the working directory
 COPY src/ .
 
 # command to run on container start
-CMD [ "python", "./rectec_state_mqtt.py" ] 
+CMD [ "python", "-u","./rectec_mqtt.py" ] 
