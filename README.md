@@ -2,9 +2,11 @@
 
 Forked from https://github.com/SDNick484/rectec_status/  His intro below
 
-Scripts to talk to [Rec Tec Grills pellet smokers](http://www.rectecgrills.com/) with the Rec Tec Wi-Pellet WiFi controllers.  Supported models include the  RT-340, RT-590, & RT-700 which all include the WiFi controller by default, and the RT-300 & RT-680 that are upgradable to the WiFi controller.
+*Scripts to talk to [Rec Tec Grills pellet smokers](http://www.rectecgrills.com/) with the Rec Tec Wi-Pellet WiFi controllers.  Supported models include the  RT-340, RT-590, & RT-700 which all include the WiFi controller by default, and the RT-300 & RT-680 that are upgradable to the WiFi controller.*
 
-The WiFi controllers on Rec Tec smokers leverage the [Tuya Smart IoT platform](https://en.tuya.com/) which can be reached over TCP or MQTT.  The scripts currently leverage [python-tuya](https://github.com/clach04/python-tuya) and communicate via TCP on port 6668 over the LAN.  Through additional exploration and collaboration, I'd like to expand the scripts to support remote access via MQTT.
+*The WiFi controllers on Rec Tec smokers leverage the [Tuya Smart IoT platform](https://en.tuya.com/) which can be reached over TCP or MQTT.  The scripts currently leverage [python-tuya](https://github.com/clach04/python-tuya) and communicate via TCP on port 6668 over the LAN.  Through additional exploration and collaboration, I'd like to expand the scripts to support remote access via MQTT.*
+
+## Usage:
 
 This fork takes the RecTec info and sends it to an MQTT server.
 
